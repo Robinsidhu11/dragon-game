@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    /* height: 100vh; */
+    
+}
+.gameover{
+    position: absolute;
+    font-size: 60px;
+    top: 8%;
+    left: 39%;
+}
+.hidegameover{
+    visibility: hidden;
+}
+img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.scorebox{
+    background: transparent;
+    border: 2px solid black;
+    width: fit-content;
+    padding: 15px 25px;
+    font-size: 25px;
+    position: absolute;
+    right: 45%;
+top: 30%;
+    width: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 12px;
+}
+span{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 25px;
+    margin-left: 3px;
+}
+.text{
+    
+}
+#dino{
+    position: absolute;
+    width: 15vw;
+    height: 9vw;
+    
+    left: 0.1%;
+}
+#dragon{
+    position: absolute;
+    width: 15vw;
+    height: 9vw;
+    bottom: 0%;
+    left: 100vw;
+}
+.dinonormal{
+    bottom: 0%;
+}
+.dinoup_down{
+    animation: fordino;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    
+}
+.dragonmove{
+    animation: fordragon;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes fordino {
+    0%{
+        bottom: 0%;
+    }
+    50%{
+        bottom: 52%;
+    }
+    100%{
+        bottom: 0%;
+    }
+}
+@keyframes fordragon {
+    0%{
+        left: 100%;
+    }
+    
+    100%{
+        left: 0%;
+    }
+    
+}
